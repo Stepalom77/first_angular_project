@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  username:string = ''
   name = 'my first Angular App';
+
+  updateUsername(){
+    this.username = ''
+  }
 }
