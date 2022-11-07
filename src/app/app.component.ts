@@ -7,9 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   username:string = ''
-  name = 'my first Angular App';
+  name = 'my first Angular App'
+  passwordCreated:boolean = false
+  passwordGeneratedCounter:Date[] = []
 
   updateUsername(){
     this.username = ''
+  }
+  displayPassword(){
+    this.passwordGeneratedCounter.push(new Date)
+    this.passwordCreated = true
   }
 }

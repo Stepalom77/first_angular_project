@@ -19,7 +19,13 @@
       <input type="text" class="form-control" [(ngModel)]="username">
       <p>{{username}}</p>
       <button class="btn btn-primary" [disabled]="username === ''" (click)="updateUsername()">Empty Username</button>-->
-      <app-servers></app-servers>
+      <button (click)="displayPassword()" class="btn btn-primary" >Display Details</button>
+      <br>
+      <p *ngIf="passwordCreated">Secret password = Typescript is cool!</p>
+      <p *ngFor="let counter of passwordGeneratedCounter" [ngClass]="{fifth: passwordGeneratedCounter.indexOf(counter) > 3}"
+        [ngStyle]="{backgroundColor: passwordGeneratedCounter.indexOf(counter) > 3 ? 'blue' : 'transparent'}">{{counter}} </p>
+      <!--<app-servers></app-servers>-->
+
     </div>
   </div>
 </div>
